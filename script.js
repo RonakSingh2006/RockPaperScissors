@@ -44,13 +44,17 @@ scissors.addEventListener("click",()=>{
 
 
 // function to update score and check winner
-let userScore = 0;
-let compScore = 0;
+let userScore = localStorage.getItem('userScore') || 0;
+let compScore = localStorage.getItem('compScore') || 0;
+
 let result = "Start The Game"
 
 let res = document.querySelector(".result");
 let scoreX = document.querySelector("#user");
 let scoreY = document.querySelector("#computer");
+scoreX.innerText = userScore;
+scoreY.innerText = compScore;
+
 let color;
 
 let game = ()=>{
@@ -75,4 +79,15 @@ let game = ()=>{
     res.style.backgroundColor = color;
     scoreX.innerText = userScore;
     scoreY.innerText = compScore;
+
+    localStorage.setItem('userScore',`${userScore}`);
+    localStorage.setItem('compScore',`${compScore}`);
 }
+
+let rbtn = document.querySelector("#reset");
+
+rbtn.addEventListener("click",()=>{
+    localStorage.clear();
+    scoreX.innerText = 0;
+    scoreY.innerText = 0;
+});

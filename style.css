@@ -66,3 +66,11 @@
     background-color:green;
     color:white;
 }
+
+#reset{
+    height: 80px;
+    width: 80px;
+    border-radius: 80px;
+    background-color: red;
+    margin: 15vh 47vw;
+}
