@@ -68,9 +68,11 @@
 }
 
 #reset{
+    position: fixed;
     height: 80px;
     width: 80px;
     border-radius: 80px;
     background-color: red;
-    margin: 15vh 47vw;
+    left: 48vw;
+    bottom: 2vw;
 }

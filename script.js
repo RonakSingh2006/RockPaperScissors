@@ -90,4 +90,6 @@ rbtn.addEventListener("click",()=>{
     localStorage.clear();
     scoreX.innerText = 0;
     scoreY.innerText = 0;
+    userScore = 0;
+    compScore = 0;
 });
